@@ -1,0 +1,55 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* bg-gradient-to-r from-light-blue to-light-green */
+body {
+  margin: 0;
+}
+
+.calculator-grid {
+  display: grid; /* grid */
+  margin-top: 2rem; /* mt-8 */
+  justify-content: center; /* justify-center */
+  grid-template-columns: repeat(4, 6rem);
+  grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
+}
+
+.calculator-grid > button {
+  cursor: pointer; /* cursor-pointer */
+  font-size: 2rem; /* text-medium */
+  border: 1px solid black; /* border border-solid border-white */
+  outline: none;  /* outline-none */
+  background-color: rgba(0, 0, 0, .5); /* bg-white bg-opacity-75 */
+}
+
+.calculator-grid > button:hover,
+.calculator-grid > button:focus {
+  background-color: rgba(0, 0, 0, .75); /* hover:bg-white hover:bg-opacity-90 */
+}
+
+.span-two {
+  grid-column: span 2; /* col-span-2 */
+}
+
+.output {
+  grid-column: 1 / -1; /* col-span-full */
+  background-color: rgba(0, 0, 0, .75); /* bg-black bg-opacity-75 */
+  display: flex; /* flex */
+  flex-direction: column; /* flex-col */
+  align-items: flex-end; /* items-end */
+  justify-content: space-around; /* justify-around */
+  padding: .75rem; /* p-3 */
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.output .previous-calculate {
+  color: rgba(255, 255, 255, .75); /* text-white text-opacity-75 */
+  font-size: 1.5rem; /* text-2xl */
+}
+
+.output .current-calculate {
+  color: white; /* text-white */
+  font-size: 2.5rem; /* text-large */
+}
